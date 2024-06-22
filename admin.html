@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator Admin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="qrcode.min.js"></script>
+</head>
+
+
+<body>
+    <h1>Morse Code Translator Admin</h1>
+    <input type="text" id="textInput" placeholder="Enter text here">
+    <div class="buttons">
+        <button onclick="displayMorseCodeLight()">Light</button>
+        <button onclick="playMorseCodeSounds()">Sound</button>
+        <button onclick="playMorseCodeVibrations()">Vibration</button>
+    </div>
+    <div id="morse_light" class="morse_light">
+    </div>
+    <div>
+        <label for="outputType">Output Type</label>
+
+        <select style="margin-top: 16px;" id="outputType">
+            <option value="light">Light</option>
+            <option value="sound">Sound</option>
+            <option value="vibration">Vibration</option>
+        </select>
+    </div>
+    <div>
+        <button onclick="generateLink()">Generate QR Code</button>
+    </div>
+    <p id="shareLink"></p>
+    <div style="margin-top: 16px" id="qrcode"></div>
+</body>
+
+</html>
